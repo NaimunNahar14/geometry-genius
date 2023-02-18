@@ -12,7 +12,7 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     const newInputAmountHString = inputFieldH.value;
     const newInputAmountH = parseFloat(newInputAmountHString);
     //Triangle card 
-    const Name = document.getElementById('card-name').innerText;
+    const Name = document.getElementById('firstcard-name').innerText;
 
     inputFieldB.value = '';
     inputFieldH.value = '';
