@@ -17,7 +17,7 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
     inputFieldB.value = '';
     inputFieldH.value = '';
 
-    //validation for negative number.
+    //validation for negative number and string.
     if (
         newInputAmountB == ""||
         newInputAmountH == ""||
@@ -25,7 +25,11 @@ document.getElementById('btn-triangle').addEventListener('click',function(){
         newInputAmountH <= 0
       ) {
         return alert("please Enter any valid number");
-      }
+      } 
+      else if(isNaN(newInputAmountB) || newInputAmountH < 0){
+        alert('Please Enter Numbers');
+    }
+   
       //Triangle Calculation
     const areaOfTriangle = (0.5* newInputAmountB * newInputAmountH).toFixed(2);
     //use the display data function
@@ -50,14 +54,18 @@ document.getElementById ('btn-rectangle').addEventListener('click',function(){
    
      //validation for negative number.
 
-    if (
-        newInputAmountW == ""||
-        newInputAmountL == ""||
-        newInputAmountW <= 0 ||
-        newInputAmountL <= 0
-      ) {
-        return alert("please enter any valid number");
-      }
+     //validation for negative number and string.
+     if (
+      newInputAmountW == ""||
+      newInputAmountL == ""||
+      newInputAmountW <= 0 ||
+      newInputAmountL <= 0
+    ) {
+      return alert("please Enter any valid number");
+    } 
+    else if(isNaN(newInputAmountW) || newInputAmountL < 0){
+      alert('Please Enter Numbers');
+  }
     //   calculation of Rectangle 
       const areaOfRectangle = (newInputAmountW * newInputAmountL).toFixed(2);
       inputFieldW.value = '';
